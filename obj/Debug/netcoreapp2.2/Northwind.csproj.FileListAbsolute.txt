@@ -64,3 +64,4 @@ C:\Users\bitstudent\Downloads\netFinal-master\.netFinal-master\obj\Debug\netcore
 C:\Users\bitstudent\Downloads\netFinal-master\.netFinal-master\obj\Debug\netcoreapp2.2\Northwind.dll
 C:\Users\bitstudent\Downloads\netFinal-master\.netFinal-master\obj\Debug\netcoreapp2.2\Northwind.pdb
 C:\Users\bitstudent\Downloads\netFinal-master\.netFinal-master\obj\Debug\netcoreapp2.2\Northwind.csproj.CopyComplete
+C:\Users\bitstudent\Downloads\netFinal-master\.netFinal-master\obj\Debug\netcoreapp2.2\Razor\Views\Discount\Index.g.cshtml.cs

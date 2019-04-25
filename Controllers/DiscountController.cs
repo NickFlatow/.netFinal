@@ -14,6 +14,13 @@ namespace Northwind.Controllers
 
         public IActionResult Index(int id) => View(repository.Discounts.FirstOrDefault(d => d.DiscountID == id));
         public IActionResult Discounts() => View(repository.Discounts.OrderBy(d => d.DiscountID));
+
+        public IActionResult EditDiscount(Discount discount)
+        {
+            // Edit customer info
+            repository.EditDiscount(discount);
+            return RedirectToAction("Index", "Home");
+        }
         //public IActionResult Index(int id) => View(repository.Products.Where(p => p.CategoryId == id && p.Discontinued == false).OrderBy(p => p.ProductName));
         //this is to the code
     }

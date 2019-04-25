@@ -3,30 +3,39 @@
 
 <h1>Discount</h1>
 
-<form method="post" asp-action="Index">
+<form method="post" asp-action="EditDiscount">
     <div asp-validation-summary="All" style="color:red;"></div>
     <input type="hidden" name="DiscountID" value="@Model.DiscountID" />
     <div class="form-row">
         <div class="form-group col-md-6">
             <label asp-for="@Model.DiscountID">DiscountID</label>
-            <input asp-for="@Model.DiscountID" class="form-control" placeholder="discountID" />
+            <input disabled asp-for="@Model.DiscountID" class="form-control" placeholder="discountID" />
         </div>
         <div class="form-group col-md-6">
             <label asp-for="@Model.Code">Code</label>
-            <input asp-for="@Model.Code" class="form-control" placeholder="Code" />
-        </div>
-        <div class="form-group col-md-6">
-            <label asp-for="@Model.ProductID">ProductID</label>
-            <input asp-for="@Model.ProductID" class="form-control" placeholder="ProductID" />
+            <input disabled asp-for="@Model.Code" class="form-control" placeholder="Code" />
         </div>
         <div class="form-group col-md-6">
             <label asp-for="@Model.Title">Title</label>
             <input asp-for="@Model.Title" class="form-control" placeholder="Title" />
         </div>
         <div class="form-group col-md-6">
-            <label asp-for="@Model.Product">Product</label>
-            <input asp-for="@Model.Product" class="form-control" placeholder="Product" />
+            <label asp-for="@Model.DiscountPercent">Discount Percentage</label>
+            <input asp-for="@Model.DiscountPercent" class="form-control" placeholder="Discount Percentage" />
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.StartTime">Start Time</label>
+            <input asp-for="@Model.StartTime" class="form-control" placeholder="Start Time" />
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.EndTime">End Time</label>
+            <input asp-for="@Model.EndTime" class="form-control" placeholder="End Time" />
+        </div>
+        <div class="form-group col-md-12">
+            <label asp-for="@Model.Description">Description</label>
+            <textarea asp-for="@Model.Description" class="form-control" placeholder="Description"></textarea>
         </div>
     </div>
+    <button type="submit" class="btn btn-outline-primary">Save</button>
 
 </form>

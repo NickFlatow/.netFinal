@@ -1,7 +1,12 @@
 ﻿@using Northwind.Models
 @model IEnumerable<Discount>
 
-<div><h2 class="mt-3"><i class="fas fa-tag"></i> Product Discounts<button type="submit" class="btn btn-outline-primary float-right">Add Discount</button></h2></div>
+<div>
+    <h2 class="mt-3"><i class="fas fa-tag"></i> Product Discounts</h2>
+    <form method="post" asp-action="Add">
+        <button type="submit" class="btn btn-outline-primary mb-3">Add Discount</button>
+    </form>
+</div>
 
 <div class="list-group">
     @foreach (Discount d in Model)
@@ -13,7 +18,7 @@
             Discount Starts: <i>@d.StartTime.ToString("MM/dd/yyyy")</i><br />
             Discount Expires: <i>@d.EndTime.ToString("MM/dd/yyyy")</i><br />
             <a href="#" class="code" data-code="@d.Code" data-product="@d.Title"><i class="far fa-hand-point-right"></i> Discount Code</a><br/>
-            <a asp-action="Index" asp-route-id="@d.DiscountID">Edit</a>
+            <a asp-action="Edit" asp-route-id="@d.DiscountID">Edit</a>
             <a href="#">Delete</a>
         </div>
     }

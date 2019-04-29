@@ -35,6 +35,13 @@ namespace Northwind.Models
             customerToUpdate.Fax = customer.Fax;
             context.SaveChanges();
         }
+        public void AddDiscount(Discount discount)
+        {
+            context.Discounts.Add(discount);
+            context.SaveChanges();
+        }
+
+
         public void EditDiscount(Discount discount)
         {
             var discountToUpdate = context.Discounts.FirstOrDefault(d => d.DiscountID == discount.DiscountID);

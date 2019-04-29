@@ -12,8 +12,16 @@ namespace Northwind.Controllers
         private INorthwindRepository repository;
         public DiscountController(INorthwindRepository repo) => repository = repo;
 
-        public IActionResult Index(int id) => View(repository.Discounts.FirstOrDefault(d => d.DiscountID == id));
+        public IActionResult Edit(int id) => View(repository.Discounts.FirstOrDefault(d => d.DiscountID == id));
         public IActionResult Discounts() => View(repository.Discounts.OrderBy(d => d.DiscountID));
+
+        public IActionResult Add() => View();
+
+        public IActionResult AddDiscount(Discount discount)
+        {
+            repository.AddDiscount(discount);
+            return RedirectToAction("Index", "Home");
+        }
 
         public IActionResult EditDiscount(Discount discount)
         {

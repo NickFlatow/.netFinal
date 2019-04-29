@@ -11,6 +11,7 @@ namespace Northwind.Models
 
         void AddCustomer(Customer customer);
         void EditCustomer(Customer customer);
+        void AddDiscount(Discount discount);
         void EditDiscount(Discount discount);
     }
 }

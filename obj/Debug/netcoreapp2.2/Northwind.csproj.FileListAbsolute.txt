@@ -68,3 +68,4 @@ C:\Users\bitstudent\Downloads\netFinal-master\.netFinal-master\obj\Debug\netcore
 C:\Users\bitstudent\Downloads\netFinal-master\.netFinal-master\obj\Debug\netcoreapp2.2\Razor\Discounts.g.cshtml.cs
 C:\Users\bitstudent\Downloads\netFinal-master\.netFinal-master\obj\Debug\netcoreapp2.2\Razor\Views\Discount\Edit.g.cshtml.cs
 C:\Users\bitstudent\Downloads\netFinal-master\.netFinal-master\obj\Debug\netcoreapp2.2\Razor\Views\Discount\Add.g.cshtml.cs
+C:\Users\bitstudent\Downloads\netFinal-master\.netFinal-master\obj\Debug\netcoreapp2.2\Razor\Views\Discount\Index.g.cshtml.cs

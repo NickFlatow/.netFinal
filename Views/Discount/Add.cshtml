@@ -10,7 +10,7 @@
             </div>*@
         <div class="form-group col-md-6">
             <label asp-for="@Model.Code">Code</label>
-            <input asp-for="@Model.Code" class="form-control" placeholder="Code" />
+            <input disabled asp-for="@Model.Code" class="form-control" placeholder="Code" id="code" />
         </div>
         <div class="form-group col-md-6">
             <label asp-for="@Model.Title">Title</label>
@@ -45,6 +45,6 @@
     {
     <script>
         var rando = Math.floor(Math.random() * 9999) + 1001;
-        console.log(rando);
+        $('#code').val(rando);
     </script>
     }

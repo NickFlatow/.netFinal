@@ -23,11 +23,16 @@ namespace Northwind.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [HttpPost]
         public IActionResult EditDiscount(Discount discount)
         {
-            // Edit customer info
-            repository.EditDiscount(discount);
-            return RedirectToAction("Index", "Home");
+            if (ModelState.IsValid)
+            {
+                // Edit customer info
+                repository.EditDiscount(discount);
+                return RedirectToAction("Index", "Home");
+            }
+            return View();
         }
         //public IActionResult Index(int id) => View(repository.Products.Where(p => p.CategoryId == id && p.Discontinued == false).OrderBy(p => p.ProductName));
         //this is to the code

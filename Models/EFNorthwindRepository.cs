@@ -16,6 +16,7 @@ namespace Northwind.Models
         public IQueryable<Product> Products => context.Products;
         public IQueryable<Discount> Discounts => context.Discounts;
         public IQueryable<Customer> Customers => context.Customers;
+        public IQueryable<Employee> Employees => context.Employees;
 
         public void AddCustomer(Customer customer)
         {
@@ -50,6 +51,29 @@ namespace Northwind.Models
             discountToUpdate.DiscountPercent = discount.DiscountPercent;
             discountToUpdate.Title = discount.Title;
             discountToUpdate.Description = discount.Description;
+            context.SaveChanges();
+        }
+
+        public void AddEmployee(Employee employee)
+        {
+            context.Employees.Add(employee);
+            context.SaveChanges();
+        }
+
+        public void EditEmployee(Employee employee)
+        {
+            var employeeToUpdate = context.Employees.FirstOrDefault(c => c.EmployeeID == employee.EmployeeID);
+            employeeToUpdate.Title = employee.Title;
+            employeeToUpdate.TitleOfCourtesy = employee.TitleOfCourtesy;
+            employeeToUpdate.BirthDate = employee.BirthDate;
+            employeeToUpdate.HireDate = employee.HireDate;
+            employeeToUpdate.Address = employee.Address;
+            employeeToUpdate.City = employee.City;
+            employeeToUpdate.Region = employee.Region;
+            employeeToUpdate.PostalCode = employee.PostalCode;
+            employeeToUpdate.Country = employee.Country;
+            employeeToUpdate.HomePhone = employee.HomePhone;
+            employeeToUpdate.Extension = employee.Extension;
             context.SaveChanges();
         }
     }

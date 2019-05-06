@@ -12955,11 +12955,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bitstudent\\Downloads\\netFinal-master\\.netFinal-master\\Northwind.csproj",
+      "projectUniqueName": "C:\\Users\\bitstudent\\source\\repos\\.netFinal\\Northwind.csproj",
       "projectName": "Northwind",
-      "projectPath": "C:\\Users\\bitstudent\\Downloads\\netFinal-master\\.netFinal-master\\Northwind.csproj",
+      "projectPath": "C:\\Users\\bitstudent\\source\\repos\\.netFinal\\Northwind.csproj",
       "packagesPath": "C:\\Users\\bitstudent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bitstudent\\Downloads\\netFinal-master\\.netFinal-master\\obj\\",
+      "outputPath": "C:\\Users\\bitstudent\\source\\repos\\.netFinal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

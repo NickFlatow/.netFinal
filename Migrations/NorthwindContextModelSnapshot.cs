@@ -15,7 +15,7 @@ namespace Northwind.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.1-servicing-10028")
+                .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -48,6 +48,9 @@ namespace Northwind.Migrations
                         .IsRequired();
 
                     b.Property<string>("Country");
+
+                    b.Property<string>("Email")
+                        .IsRequired();
 
                     b.Property<string>("Fax");
 
@@ -87,6 +90,50 @@ namespace Northwind.Migrations
                     b.HasIndex("ProductID");
 
                     b.ToTable("Discounts");
+                });
+
+            modelBuilder.Entity("Northwind.Models.Employee", b =>
+                {
+                    b.Property<int>("EmployeeID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address");
+
+                    b.Property<DateTime>("BirthDate");
+
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.Property<string>("Extension");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired();
+
+                    b.Property<DateTime>("HireDate");
+
+                    b.Property<string>("HomePhone");
+
+                    b.Property<string>("LastName")
+                        .IsRequired();
+
+                    b.Property<string>("PostalCode");
+
+                    b.Property<string>("Region");
+
+                    b.Property<int>("ReportsTo");
+
+                    b.Property<string>("Title");
+
+                    b.Property<string>("TitleOfCourtesy");
+
+                    b.HasKey("EmployeeID");
+
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("Northwind.Models.Product", b =>

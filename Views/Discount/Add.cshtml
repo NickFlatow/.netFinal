@@ -1,6 +1,7 @@
 ﻿@using Northwind.Models
 @model Discount
 
+
 <form method="post" asp-action="AddDiscount">
     <div asp-validation-summary="All" style="color:red;"></div>
     <div class="form-row">
@@ -26,11 +27,11 @@
         </div>
         <div class="form-group col-md-6">
             <label asp-for="@Model.StartTime">Start Time</label>
-            <input asp-for="@Model.StartTime" class="form-control" placeholder="Start Time" />
+            <input type="date"  id="startTime" asp-for="@Model.StartTime" class="form-control" placeholder="Start Time" />
         </div>
         <div class="form-group col-md-6">
             <label asp-for="@Model.EndTime">End Time</label>
-            <input asp-for="@Model.EndTime" class="form-control" placeholder="End Time" />
+            <input type="date" asp-for="@Model.EndTime" class="form-control" placeholder="End Time" />
         </div>
         <div class="form-group col-md-12">
             <label asp-for="@Model.Description">Description</label>
@@ -44,7 +45,24 @@
 @section scripts
     {
     <script>
+        //find random number
         var rando = Math.floor(Math.random() * 9999) + 1001;
+        //set code to random number
         $('#code').val(rando);
+
+        //find todays date
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd
+        }
+        if (mm < 10) {
+            mm = '0' + mm
+        }
+        today = yyyy + '-' + mm + '-' + dd;
+        //set min value to todays date
+        $('#startTime').attr("min", today);
     </script>
-    }
+}

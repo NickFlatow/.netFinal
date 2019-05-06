@@ -53,6 +53,11 @@ namespace Northwind.Models
             discountToUpdate.Description = discount.Description;
             context.SaveChanges();
         }
+        public void DeleteDiscount(Discount discount)
+        {
+            context.Remove(discount);
+            context.SaveChanges();
+        }
 
         public void AddEmployee(Employee employee)
         {

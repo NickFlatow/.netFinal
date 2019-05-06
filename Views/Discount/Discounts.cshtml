@@ -19,7 +19,7 @@
             Discount Expires: <i>@d.EndTime.ToString("MM/dd/yyyy")</i><br />
             <a href="#" class="code" data-code="@d.Code" data-product="@d.Title"><i class="far fa-hand-point-right"></i> Discount Code</a><br/>
             <a asp-action="Edit" asp-route-id="@d.DiscountID">Edit</a>
-            <a href="#">Delete</a>
+            <a asp-action="DeleteDiscount" asp-route-id="@d.DiscountID">Delete</a>
         </div>
     }
 </div>

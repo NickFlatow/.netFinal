@@ -18,7 +18,23 @@ namespace Northwind.Controllers
 
         public IActionResult Discounts() => View(repository.Discounts.OrderBy(d => d.DiscountID));
 
-        public IActionResult Add() => View();
+        public IActionResult Add()
+        {
+            List<Product> productList = new List<Product>();
+            productList = repository.Products.ToList();
+            //productList = (from Product in repository.Products select Product).ToList();
+            ViewBag.ListofProducts = productList;
+            ViewBag.test = "test";
+           return View();
+
+        }
+        public IActionResult Test()
+        {
+            List<Product> productList = new List<Product>();
+            productList = repository.Products.ToList();
+            ViewBag.ListofProducts = productList;
+            return View();
+        }
 
         [HttpPost, ValidateAntiForgeryToken]
         public IActionResult AddDiscount(Discount discount)

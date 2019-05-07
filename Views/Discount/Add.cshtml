@@ -22,8 +22,11 @@
             <input asp-for="@Model.DiscountPercent" class="form-control" placeholder="Discount Percentage" />
         </div>
         <div class="form-group col-md-6">
-            <label asp-for="@Model.ProductID">Product ID</label>
-            <input asp-for="@Model.ProductID" class="form-control" placeholder="ProductID" />
+            <label asp-for="@Model.ProductID">Product</label>
+            <select asp-for="@Model.ProductID" class="form-control"
+                asp-items='@(new SelectList(ViewBag.ListofProducts,"ProductId","ProductName"))'>
+                <option>Select</option>
+            </select>
         </div>
         <div class="form-group col-md-6">
             <label asp-for="@Model.StartTime">Start Time</label>

@@ -21,19 +21,10 @@ namespace Northwind.Controllers
         public IActionResult Add()
         {
             List<Product> productList = new List<Product>();
-            productList = repository.Products.ToList();
-            //productList = (from Product in repository.Products select Product).ToList();
+            productList = repository.Products.OrderBy(p => p.ProductName).ToList();
             ViewBag.ListofProducts = productList;
-            ViewBag.test = "test";
            return View();
 
-        }
-        public IActionResult Test()
-        {
-            List<Product> productList = new List<Product>();
-            productList = repository.Products.ToList();
-            ViewBag.ListofProducts = productList;
-            return View();
         }
 
         [HttpPost, ValidateAntiForgeryToken]

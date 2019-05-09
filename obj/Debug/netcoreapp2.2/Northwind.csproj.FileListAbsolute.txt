@@ -290,4 +290,3 @@ C:\Users\bitstudent\source\repos\.netFinal\obj\Debug\netcoreapp2.2\Northwind.Vie
 C:\Users\bitstudent\source\repos\.netFinal\obj\Debug\netcoreapp2.2\Northwind.dll
 C:\Users\bitstudent\source\repos\.netFinal\obj\Debug\netcoreapp2.2\Northwind.pdb
 C:\Users\bitstudent\source\repos\.netFinal\obj\Debug\netcoreapp2.2\Northwind.csproj.CopyComplete
-C:\Users\bitstudent\source\repos\.netFinal\obj\Debug\netcoreapp2.2\Razor\Views\Discount\Test.g.cshtml.cs
